@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div class="row col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        New Task
+      </div>
+      <div class="panel-body">
+        <form #f="ngForm" (ngSubmit)="onSaveTask(f.value)">
+          <div class="form-group">
+            <label class="control-label"> Task name: </label>
+            <input class="form-control" type="text" name="taskName" ngModel="" required/>
+          </div>
+          <button class="btn btn-danger" type="submit"  [disabled]="!f.valid">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
